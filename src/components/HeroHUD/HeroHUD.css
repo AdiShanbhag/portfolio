@@ -44,8 +44,10 @@
 
 /* HUD panels */
 .hud-panel {
+  flex: 1 1 300px;
   width: 100%;
   max-width: 400px;
+  min-width: 250px; /* optional to avoid too narrow */
   box-sizing: border-box;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -118,6 +120,12 @@
 }
 
 /* Side panels styling */
+
+.side-panel {
+  position: relative;
+  top: 20%;
+}
+
 .side-panel ul {
   list-style: none;
   padding-left: 0;
@@ -127,21 +135,6 @@
 .side-panel li {
   margin-bottom: 0.5rem;
   font-size: 1rem;
-}
-
-/* Position side panels absolutely on desktop */
-.left-panel {
-  position: absolute;
-  top: 20%;
-  left: 2rem;
-}
-
-.right-panel {
-  position: absolute;
-  top: 20%;
-  right: 2rem;
-  max-width: 300px;
-  text-align: right;
 }
 
 /* Responsive adjustments for small screens */

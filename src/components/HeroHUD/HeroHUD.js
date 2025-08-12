@@ -15,7 +15,7 @@ export default function HeroHUD() {
         </div>
       </div>
 
-      <div className="hud-panel side-panel left-panel">
+      <div className="hud-panel side-panel">
         <h3>STATUS</h3>
         <ul>
           <li>Location: Canberra</li>
@@ -24,7 +24,7 @@ export default function HeroHUD() {
         </ul>
       </div>
 
-      <div className="hud-panel side-panel right-panel">
+      <div className="hud-panel side-panel">
         <h3>OBJECTIVES</h3>
         <ul>
           <li>Build innovative apps</li>

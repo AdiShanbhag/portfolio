@@ -68,8 +68,6 @@ export default function Header() {
             <div className="bar" />
             <div className="bar" />
             <div className="bar" />
-            <div className="bar" />
-            <div className="bar" />
           </>
         )}
       </button>
