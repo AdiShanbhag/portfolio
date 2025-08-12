@@ -41,7 +41,7 @@ export default function Header() {
       </div>
 
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-        {["projects", "experience", "skills", "contact"].map((id) => (
+        {["projects", "experience", "education", "skills", "contact"].map((id) => (
           <button
             key={id}
             className="nav-link"
@@ -65,6 +65,7 @@ export default function Header() {
           <span className="close-icon">&times;</span>  // Close icon (×)
         ) : (
           <>
+            <div className="bar" />
             <div className="bar" />
             <div className="bar" />
             <div className="bar" />
