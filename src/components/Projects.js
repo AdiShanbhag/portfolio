@@ -32,15 +32,23 @@ export default function Projects() {
             <h3>{title}</h3>
             <p>{description}</p>
             <div className="project-links">
-              {link && link !== "#" && (
-                <a href={demo} target="_blank" rel="noreferrer">
-                  Github
-                </a>
-              )}
-              {demo && demo !== "#" && (
-                <a href={demo} target="_blank" rel="noreferrer">
-                  Live Demo
-                </a>
+              {link === "#" && demo === "#" ? (
+                <button className="coming-soon" disabled>
+                  Coming Soon
+                </button>
+              ) : (
+                <>
+                  {link && link !== "#" && (
+                    <a href={link} target="_blank" rel="noreferrer">
+                      GitHub
+                    </a>
+                  )}
+                  {demo && demo !== "#" && (
+                    <a href={demo} target="_blank" rel="noreferrer">
+                      Live Demo
+                    </a>
+                  )}
+                </>
               )}
             </div>
           </div>
