@@ -2,7 +2,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroHUD from "./components/HeroHUD";
-import HeroMatrix from "./components/HeroMatrix";
 import IntroDescription from "./components/IntroDescription";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";

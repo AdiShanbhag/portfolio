@@ -7,7 +7,6 @@ export default function HeroHUD() {
       <div className="scanlines"></div>
 
       <div className="hud-panel briefing-panel">
-        <h2>MISSION BRIEFING</h2>
         <h1 className="hero-name">Aditya Shanbhag</h1>
         <p className="role">Full Stack Developer</p>
 
