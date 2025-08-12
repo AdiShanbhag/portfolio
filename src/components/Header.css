@@ -2,7 +2,9 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1rem 2rem;
+  height: 60px;               /* fixed height */
+  line-height: 60px;          /* vertically center content */
+  padding: 0 2rem;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid #0ff;
@@ -94,6 +96,13 @@
   height: 3px;
   background-color: #0ff;
   border-radius: 2px;
+}
+
+.close-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #0ff;
+  user-select: none;
 }
 
 /* Responsive styles */

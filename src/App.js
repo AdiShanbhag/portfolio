@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import HeroHUD from "./components/HeroHUD";
 import IntroDescription from "./components/IntroDescription";
 import Projects from "./components/Projects";
+import ScrollToTop from "./components/ScrollToTop";
 import Skills from "./components/Skills";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Projects />
         <Contact />
       </main>
+      <ScrollToTop />
       <Footer />
     </>
   );

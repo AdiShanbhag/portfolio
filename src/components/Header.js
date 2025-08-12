@@ -67,9 +67,15 @@ export default function Header() {
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
-        <div className="bar" />
-        <div className="bar" />
-        <div className="bar" />
+        {menuOpen ? (
+          <span className="close-icon">&times;</span>  // Close icon (×)
+        ) : (
+          <>
+            <div className="bar" />
+            <div className="bar" />
+            <div className="bar" />
+          </>
+        )}
       </button>
     </header>
   );

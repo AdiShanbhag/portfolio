@@ -4,7 +4,7 @@
   position: relative;
   min-height: 70vh;
   height: auto;
-  padding-bottom: 2rem;
+  padding: 60px 2rem 2rem 2rem; /* top padding to clear fixed header */
   background: radial-gradient(circle at center, #0a0a14, #000000);
   color: #0ff;
   font-family: "Orbitron", monospace, sans-serif;
@@ -13,7 +13,6 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  padding: 2rem;
 
   /* Allow flex items to wrap on small screens */
   flex-wrap: wrap;
@@ -149,8 +148,7 @@
 @media (max-width: 900px) {
   .hero-hud {
     gap: 1.5rem;
-    padding: 1rem;
-    padding-top: 100px; /* clear fixed header */
+    padding: 100px 1rem 1rem 1rem; /* more top padding on smaller screens */
     justify-content: center;
     box-sizing: border-box;
   }
@@ -170,7 +168,7 @@
 
 @media (max-width: 480px) {
   .hero-hud {
-    padding-top: 90px; /* slightly less for smaller phones */
+    padding: 90px 1rem 1rem 1rem; /* slightly less top padding on very small screens */
   }
 
   .hero-name {
@@ -182,7 +180,6 @@
     margin: 0 auto !important;
     padding: 0 1rem !important;
     line-height: 1.2 !important;
-
     overflow-x: hidden !important;
     display: block;
     box-sizing: border-box;
