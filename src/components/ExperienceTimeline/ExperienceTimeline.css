@@ -1,0 +1,93 @@
+.experience-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  color: #0ff;
+  font-family: 'Orbitron', monospace, sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #0ff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover {
+  background-color: rgba(0, 255, 255, 0.12);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #0ff;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-title {
+  font-size: 1.3rem;
+  margin: 0.25rem 0;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 0.25rem;
+  color: #aaffffcc;
+}
+
+.timeline-date {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #55ffffcc;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-arrow {
+  font-size: 1.25rem;
+  color: #0ff;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.timeline-arrow.open {
+  transform: rotate(180deg);
+}
+
+.timeline-details {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #aaffffcc;
+  margin-top: 0.5rem;
+}

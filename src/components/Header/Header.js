@@ -8,10 +8,19 @@ export default function Header() {
     <header className="header">
       <div className="header-left">
         <h1>
-          <a href="#top" className="header-title">
+          <a
+            href="#top"
+            className="header-title"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("top");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             Aditya Shanbhag
           </a>
         </h1>
+
         <a
           href="https://www.linkedin.com/in/aditya1374"
           target="_blank"
@@ -31,18 +40,20 @@ export default function Header() {
         </a>
       </div>
 
-      
-
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <a href="#skills" onClick={() => setMenuOpen(false)}>
-          Skills
-        </a>
-        <a href="#projects" onClick={() => setMenuOpen(false)}>
-          Projects
-        </a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>
-          Contact
-        </a>
+        {["projects", "experience", "skills", "contact"].map((id) => (
+          <button
+            key={id}
+            className="nav-link"
+            onClick={() => {
+              const el = document.getElementById(id);
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+              setMenuOpen(false);
+            }}
+          >
+            {id.charAt(0).toUpperCase() + id.slice(1)}
+          </button>
+        ))}
       </nav>
 
       <button
@@ -54,6 +65,7 @@ export default function Header() {
           <span className="close-icon">&times;</span>  // Close icon (×)
         ) : (
           <>
+            <div className="bar" />
             <div className="bar" />
             <div className="bar" />
             <div className="bar" />
