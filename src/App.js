@@ -15,8 +15,8 @@ function App() {
       <HeroHUD />
       <IntroDescription />
       <main className="main-content">
-        <Skills />
         <Projects />
+        <Skills />
         <Contact />
       </main>
       <ScrollToTop />

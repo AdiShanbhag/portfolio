@@ -1,24 +1,16 @@
-import React from "react";
+import './IntroDescription.css'
 
 export default function IntroDescription() {
   return (
-    <section
-      style={{
-        maxWidth: "900px",
-        margin: "2rem auto",
-        padding: "0 1rem",
-        color: "#0ff",
-        fontFamily: "'Orbitron', monospace, sans-serif",
-        textAlign: "center",
-        fontSize: "1.2rem",
-        lineHeight: "1.5",
-      }}
-    >
-      <p>
-        I am a passionate Full Stack Developer specializing in AI and web development, with over 5 years of
-        experience delivering innovative and scalable software solutions. I enjoy transforming complex problems
-        into user-friendly applications and continuously exploring cutting-edge technologies.
-      </p>
+    <section className="intro-description">
+      <div className="hud-panel briefing-panel">
+        <h1 className="hero-name">Briefing</h1>
+          <p>
+            With 5+ years of industry experience crafting scalable Java Spring Boot applications, 
+            I’m equally passionate about gaming on PC and PS5 and diving into game development—where 
+            code meets creativity.
+          </p>
+       </div>
     </section>
   );
 }

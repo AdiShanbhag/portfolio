@@ -1,0 +1,44 @@
+.intro-description {
+  max-width: 1000px; /* wider max width */
+  margin: 3rem auto;  /* a bit more top-bottom margin */
+  padding: 0 2rem;    /* more horizontal padding */
+  color: #0ff;
+  font-family: 'Orbitron', monospace, sans-serif;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.intro-description .hud-panel {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 1rem;
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.35),
+    inset 0 0 15px rgba(0, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 3rem; /* bigger padding */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  max-width: 900px; /* keep the card not too wide */
+}
+
+.intro-description .hud-panel:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 40px rgba(0, 255, 255, 0.6),
+    inset 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.intro-description .hero-name {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.intro-description p {
+  margin: 0 auto;
+  max-width: 700px;
+  font-weight: 500;
+  color: #aaffffcc;
+}
