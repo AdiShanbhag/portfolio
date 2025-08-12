@@ -1,14 +1,14 @@
 import "./Skills.css";
 
 const skills = [
-  { name: "Java", level: 90 },
-  { name: "Spring Boot", level: 85 },
-  { name: "React", level: 80 },
-  { name: "Three.js", level: 75 },
-  { name: "JUnit", level: 80 },
+  { name: "Java", level: 75 },
+  { name: "Spring Boot", level: 65 },
+  { name: "React", level: 75 },
+  { name: "Three.js", level: 50 },
+  { name: "JUnit", level: 60 },
   { name: "Git", level: 90 },
-  { name: "Unity", level: 70 },
-  { name: "SQL", level: 80 },
+  { name: "Unity", level: 80 },
+  { name: "C#", level: 50 },
 ];
 
 export default function Skills() {
