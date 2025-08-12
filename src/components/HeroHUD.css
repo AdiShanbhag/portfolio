@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+.hero-hud {
+  position: relative;
+  min-height: 70vh;
+  height: auto;
+  padding-bottom: 2rem;
+  background: radial-gradient(circle at center, #0a0a14, #000000);
+  color: #0ff;
+  font-family: "Orbitron", monospace, sans-serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+
+  /* Allow flex items to wrap on small screens */
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* Scanlines overlay */
+.scanlines {
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 255, 0.05) 0,
+      rgba(0, 255, 255, 0.05) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  animation: scanline-move 3s linear infinite;
+  z-index: 5;
+}
+
+@keyframes scanline-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 4px; }
+}
+
+/* HUD panels */
+.hud-panel {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #0ff;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  color: #0ff;
+  text-shadow: 0 0 8px #0ff;
+  z-index: 10;
+}
+
+/* Mission briefing central panel */
+.briefing-panel {
+  flex-shrink: 0;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Add padding-right only on large screens */
+@media (min-width: 901px) {
+  .briefing-panel {
+    padding-right: 3rem;
+  }
+}
+
+/* Hero name styling */
+.hero-name {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.2;
+  max-width: 100%;
+  background: transparent !important;
+}
+
+/* Role */
+.role {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #5ff;
+}
+
+/* Loading bar container */
+.loading-bar {
+  background: rgba(0, 255, 255, 0.2);
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+/* Animated loading fill */
+.loading-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #0ff, #5ff, #0ff);
+  animation: loading-fill 3s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+@keyframes loading-fill {
+  0%, 100% { width: 0; }
+  50% { width: 100%; }
+}
+
+/* Side panels styling */
+.side-panel ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.side-panel li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Position side panels absolutely on desktop */
+.left-panel {
+  position: absolute;
+  top: 20%;
+  left: 2rem;
+}
+
+.right-panel {
+  position: absolute;
+  top: 20%;
+  right: 2rem;
+  max-width: 300px;
+  text-align: right;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 900px) {
+  .hero-hud {
+    gap: 1.5rem;
+    padding: 1rem;
+    padding-top: 100px; /* clear fixed header */
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .left-panel,
+  .right-panel {
+    position: static;
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-hud {
+    padding-top: 90px; /* slightly less for smaller phones */
+  }
+
+  .hero-name {
+    font-size: 1.8rem !important;
+    max-width: 90vw !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    line-height: 1.2 !important;
+
+    overflow-x: hidden !important;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .hud-panel {
+    min-width: 90vw;
+    max-width: 90vw;
+    padding: 1rem 1.5rem;
+  }
+}

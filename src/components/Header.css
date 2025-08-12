@@ -1,0 +1,146 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #0ff;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0ff;
+  box-sizing: border-box;
+}
+
+/* Flex container for name + linkedin on left */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Site title */
+.header-title {
+  color: #0ff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header-title:hover {
+  color: #5ff;
+}
+
+/* LinkedIn next to name (small screens) */
+.linkedin-link {
+  display: flex;
+  align-items: center;
+  color: #0ff;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: #5ff;
+}
+
+/* Centered LinkedIn icon on large screens - hidden by default */
+.linkedin-center {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #0ff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.linkedin-center:hover {
+  color: #5ff;
+}
+
+/* Nav links desktop */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #0ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #5ff;
+}
+
+/* Hamburger button hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #0ff;
+  border-radius: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 60px; /* height of header */
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    gap: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Show LinkedIn next to name */
+  .linkedin-link {
+    display: flex;
+  }
+
+  /* Hide centered LinkedIn on small */
+  .linkedin-center {
+    display: none;
+  }
+}
+
+/* Large screen styles */
+@media (min-width: 769px) {
+  /* Hide LinkedIn next to name */
+  .linkedin-link {
+    display: none;
+  }
+
+  /* Show LinkedIn centered */
+  .linkedin-center {
+    display: flex;
+  }
+}
