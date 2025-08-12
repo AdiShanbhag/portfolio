@@ -11,7 +11,7 @@ export default function ScrollToTop() {
         setVisible(window.pageYOffset > 300);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
 
     // Immediately check scroll position on mount
     toggleVisibility();
