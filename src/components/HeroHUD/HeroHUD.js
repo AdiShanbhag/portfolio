@@ -19,11 +19,7 @@ export default function HeroHUD() {
         <h3>STATUS</h3>
         <ul>
           <li>Location: Canberra</li>
-<<<<<<< HEAD
           <li>Experience: 4+ Years</li>
-=======
-          <li>Experience: 5+ Years</li>
->>>>>>> 373f3d3c8aa59f58907389a8236ecafd1cf63f07
           <li>Speciality: Java Developer</li>
         </ul>
       </div>

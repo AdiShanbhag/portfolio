@@ -8,13 +8,8 @@ const projects = [
     demo: "https://devmateai.netlify.app/codexplainer",
   },
   {
-<<<<<<< HEAD
     title: "Assignment Manager",
     description: "A mobile app for students to manage their assignments",
-=======
-    title: "Slice Rally",
-    description: "3D low-poly racing game built with Unity.",
->>>>>>> 373f3d3c8aa59f58907389a8236ecafd1cf63f07
     link: "#",
     demo: "#",
   },
