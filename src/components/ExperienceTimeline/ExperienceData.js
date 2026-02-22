@@ -16,15 +16,9 @@ const experiences = [
     date: "Apr 2023 – Nov 2024",
     location: "Bangalore, India",
     details: [
-<<<<<<< HEAD
       "Resolved 100+ weekly client issues on Microsoft Office tools with a 4.8/5 satisfaction rating.",
       "Diagnosed and resolved recurring system and configuration issues, improving first‑call resolution by 30%.",
       "Reduced escalation rate by 15%. by identifying root causes of recurring configuration failures."
-=======
-      "Assisted customers with Microsoft Office tools.",
-      "Handled password resets and account access issues.",
-      "Maintained professional tone in high-pressure calls."
->>>>>>> 373f3d3c8aa59f58907389a8236ecafd1cf63f07
     ],
   },
   {
@@ -33,15 +27,9 @@ const experiences = [
     date: "Mar 2021 – Apr 2023",
     location: "Bangalore, India",
     details: [
-<<<<<<< HEAD
       "Migrated legacy applications from physical Data structures to cloud platforms using modular OOP refactoring, reducing rollbacks by 40%.",
       "Applied Observer and Repository patterns for event‑driven modules, improving code maintainability.",
       "Coordinated stakeholders across 3 time zones, improving turnaround by 25%",
-=======
-      "Led system migration planning and execution with minimal downtime.",
-      "Conducted pre- and post-migration testing to ensure system stability.",
-      "Identified and resolved compatibility and performance issues.",
->>>>>>> 373f3d3c8aa59f58907389a8236ecafd1cf63f07
       "Communicated progress, issues, and risks to stakeholders, including project managers, business owners, and technical teams."
     ],
   },
