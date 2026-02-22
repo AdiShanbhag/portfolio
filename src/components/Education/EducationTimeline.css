@@ -1,0 +1,97 @@
+.education-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  color: #0ff;
+  font-family: 'Orbitron', monospace, sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.education-timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #0ff;
+}
+
+.education-timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+}
+
+.education-timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: #0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #0ff;
+}
+
+.education-timeline-content {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+.education-timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.education-timeline-date {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #55ffffcc;
+}
+
+.education-timeline-title {
+  font-size: 1.3rem;
+  margin: 0.25rem 0;
+}
+
+.education-timeline-institution {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.education-timeline-details {
+  list-style-type: disc;
+  margin-left: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #aaffffcc;
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.education-timeline-details.expanded {
+  max-height: 1000px;
+}
+
+.read-more-btn {
+  margin-top: 0.5rem;
+  background: none;
+  border: none;
+  color: #0ff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.read-more-btn:hover {
+  color: #5ff;
+}

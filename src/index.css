@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+body, html, #root {
+  margin: 0;
+  background: radial-gradient(circle at center, #01010f, #000000);
+  font-family: "Orbitron", sans-serif;
+  color: #0ff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #5ff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}

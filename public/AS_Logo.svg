@@ -1,0 +1,43 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">AS monogram logo</title>
+  <desc id="desc">Minimal tech monogram with rounded square and neon cyan glow</desc>
+
+  <!-- defs: glow filter -->
+  <defs>
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="coloredBlur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- subtle inner shadow -->
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="1" result="offset"></feOffset>
+      <feGaussianBlur in="offset" stdDeviation="1" result="blur"></feGaussianBlur>
+      <feComposite in="blur" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="inner"></feComposite>
+      <feMerge>
+        <feMergeNode in="inner"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background (for contexts that don't have page background) -->
+  <rect width="120" height="120" rx="20" ry="20" fill="#03040a"></rect>
+
+  <!-- rounded badge with neon stroke and glow -->
+  <rect x="8" y="8" width="104" height="104" rx="18" ry="18" fill="#07101a" stroke="#00f0d1" stroke-width="2.5" filter="url(#neon)"></rect>
+
+  <!-- inner panel for depth -->
+  <rect x="12" y="12" width="96" height="96" rx="14" ry="14" fill="rgba(0,0,0,0.25)" filter="url(#innerShadow)"></rect>
+
+  <!-- AS letters -->
+  <g transform="translate(0,6)">
+    <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" font-family="Orbitron, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="44" fill="#cffff9" style="letter-spacing: -2px; filter: none;">
+      AS
+    </text>
+  </g>
+</svg>

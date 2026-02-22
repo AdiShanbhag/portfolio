@@ -1,0 +1,45 @@
+.hero-matrix {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black; /* fallback background */
+}
+
+.hero-matrix canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* fill the container fully */
+  height: 100%;  /* fill the container fully */
+  display: block;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10; /* above the canvas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  pointer-events: none; /* so mouse events pass through if needed */
+  padding: 1rem 2rem;
+}
+
+.hero-name {
+  font-family: "Orbitron", monospace, sans-serif;
+  font-size: 2.5rem;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 20px #0ff;
+  white-space: pre; /* preserve spaces for typing effect */
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5); /* translucent dark background */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  max-width: 90vw;
+  word-wrap: break-word;
+  margin: 2rem 1rem;
+}
