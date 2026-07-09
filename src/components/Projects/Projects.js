@@ -2,24 +2,26 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "AI Code Explainer",
-    description: "Web app that explains code snippets using AI.",
-    link: "#",
-    demo: "https://devmateai.netlify.app/codexplainer",
+    title: "DevMate AI",
+    description:
+      "An AI-powered web app with two tools: a code explainer that breaks down code snippets, and a resume analyzer that reviews resumes and gives suggestions.",
+    demo: "https://devmateai.netlify.app/",
+    buttonLabel: "Live Demo",
   },
   {
-    title: "Assignment Manager",
-    description: "A mobile app for students to manage their assignments",
-    link: "#",
-    demo: "#",
+    title: "WoodIt",
+    description:
+      "A mobile puzzle game built in Unity, currently in closed testing on Google Play. Currently working through Google Play's testing requirements to move toward production release.",
+    demo: "https://paced.com.au",
+    buttonLabel: "Join Testing",
   },
   {
-    title: "Resume Reviewer",
-    description: "AI-powered resume review and suggestions tool.",
-    link: "#",
-    demo: "https://devmateai.netlify.app/resume-analyzer",
+    title: "Bull Magpie",
+    description:
+      "A real-time multiplayer word game built with Socket.io, React, and Node.js, deployed on Vercel and Railway. Handles game state synchronization and player disconnect/reconnect logic so games stay consistent even when connections drop.",
+    demo: "https://bull-magpie.vercel.app/",
+    buttonLabel: "Live Demo",
   },
-  // Add more projects here
 ];
 
 export default function Projects() {
@@ -27,29 +29,14 @@ export default function Projects() {
     <section id="projects" className="projects-section">
       <h2>Projects</h2>
       <div className="projects-grid">
-        {projects.map(({ title, description, link, demo }) => (
+        {projects.map(({ title, description, demo, buttonLabel }) => (
           <div key={title} className="project-card">
             <h3>{title}</h3>
             <p>{description}</p>
             <div className="project-links">
-              {link === "#" && demo === "#" ? (
-                <button className="coming-soon" disabled>
-                  Coming Soon
-                </button>
-              ) : (
-                <>
-                  {link && link !== "#" && (
-                    <a href={link} target="_blank" rel="noreferrer">
-                      GitHub
-                    </a>
-                  )}
-                  {demo && demo !== "#" && (
-                    <a href={demo} target="_blank" rel="noreferrer">
-                      Live Demo
-                    </a>
-                  )}
-                </>
-              )}
+              <a href={demo} target="_blank" rel="noreferrer">
+                {buttonLabel}
+              </a>
             </div>
           </div>
         ))}

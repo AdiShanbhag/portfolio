@@ -5,6 +5,7 @@ import ExperienceTimeline from "./components/ExperienceTimeline/ExperienceTimeli
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import HeroHUD from "./components/HeroHUD/HeroHUD";
+import HeroMatrix from "./components/HeroMatrix/HeroMatrix";
 import IntroDescription from "./components/IntroDescription/IntroDescription";
 import Projects from "./components/Projects/Projects";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
@@ -20,6 +21,7 @@ function App() {
     <>
       <div id="top"></div>
       <Header />
+      <HeroMatrix />
       <HeroHUD />
       <IntroDescription />
       <main className="main-content">
