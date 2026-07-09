@@ -29,6 +29,16 @@
   backdrop-filter: blur(6px);
   cursor: pointer;
   transition: background-color 0.3s ease;
+  opacity: 0;
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-35px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.timeline-item.slide-in {
+  animation: slide-in-left 0.5s ease both;
 }
 
 .timeline-item:hover {
@@ -90,4 +100,44 @@
   line-height: 1.4;
   color: #aaffffcc;
   margin-top: 0.5rem;
+}
+
+/* ── Section heading row (Experience + Education) ── */
+
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading-row .section-title {
+  margin-bottom: 0;
+}
+
+/* ── Pull / Present robot ── */
+
+.robot-pull {
+  height: 80px;
+  width: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 4px #0ff) drop-shadow(0 0 8px #0ff);
+}
+
+.robot-present-left {
+  transform-box: fill-box;
+  transform-origin: right center;
+  animation: present-raise 1.4s ease-in-out infinite alternate;
+}
+
+.robot-present-right {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: present-raise 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes present-raise {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
 }

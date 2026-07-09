@@ -1,0 +1,73 @@
+.scroll-follower {
+  position: fixed;
+  right: 14px;
+  z-index: 1000;
+  pointer-events: none;
+  transition: top 0.12s ease-out;
+}
+
+.scroll-follower-robot {
+  width: 50px;
+  height: auto;
+  filter: drop-shadow(0 0 4px #0ff) drop-shadow(0 0 10px #0ff);
+}
+
+/* Idle float */
+.scroll-follower-robot.idle {
+  animation: follower-float 2.6s ease-in-out infinite;
+}
+
+/* Head rotates to look around when idle */
+.follower-head {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+}
+.follower-head.idle {
+  animation: follower-look 4.5s ease-in-out infinite;
+}
+
+/* Core pulse */
+.follower-core {
+  animation: follower-core-pulse 1.8s ease-in-out infinite;
+}
+
+/* Legs */
+.follower-leg {
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+.follower-leg-left.walking {
+  animation: leg-walk 0.36s ease-in-out infinite alternate;
+}
+.follower-leg-right.walking {
+  animation: leg-walk 0.36s ease-in-out 0.18s infinite alternate-reverse;
+}
+
+@keyframes follower-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+
+@keyframes follower-look {
+  0%, 100%  { transform: rotate(0deg); }
+  15%, 25%  { transform: rotate(-15deg); }
+  42%, 55%  { transform: rotate(0deg); }
+  68%, 78%  { transform: rotate(15deg); }
+  92%       { transform: rotate(0deg); }
+}
+
+@keyframes follower-core-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+@keyframes leg-walk {
+  0%   { transform: rotate(-20deg); }
+  100% { transform: rotate(20deg); }
+}
+
+@media (max-width: 768px) {
+  .scroll-follower {
+    display: none;
+  }
+}

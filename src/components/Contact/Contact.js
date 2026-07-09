@@ -1,12 +1,61 @@
 import React from "react";
 import "./Contact.css";
 
+function WalkieRobot() {
+  return (
+    <svg viewBox="0 0 65 90" overflow="visible" className="robot-walkie" aria-hidden="true">
+      <g stroke="#0ff" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        {/* Robot antenna */}
+        <line x1="27" y1="3" x2="27" y2="11" strokeWidth="1.5" />
+        <circle cx="27" cy="2" r="3" fill="#0ff" stroke="none" />
+        {/* Head */}
+        <rect x="15" y="11" width="24" height="18" rx="2" />
+        <rect x="19" y="16" width="5" height="5" rx="1" fill="#0ff" stroke="none" />
+        <rect x="30" y="16" width="5" height="5" rx="1" fill="#0ff" stroke="none" />
+        <rect x="19" y="24" width="16" height="3" rx="1" />
+        {/* Neck */}
+        <rect x="23" y="29" width="8" height="4" rx="1" />
+        {/* Body */}
+        <rect x="13" y="33" width="28" height="26" rx="2" />
+        <circle cx="27" cy="46" r="6" />
+        <circle cx="27" cy="46" r="3" fill="#0ff" stroke="none" className="section-robot-core" />
+        {/* Left arm waving */}
+        <g className="robot-walkie-wave">
+          <rect x="1" y="34" width="11" height="7" rx="2" />
+        </g>
+        {/* Right upper arm raised */}
+        <rect x="41" y="21" width="8" height="17" rx="2" />
+        {/* Walkie-talkie device */}
+        <rect x="37" y="4" width="13" height="18" rx="2" />
+        <line x1="40" y1="9" x2="47" y2="9" strokeWidth="1.2" />
+        <circle cx="44" cy="15" r="2.5" />
+        <rect x="39" y="18" width="9" height="2" rx="1" />
+        {/* Device antenna (blinks) */}
+        <g className="robot-walkie-antenna">
+          <line x1="46" y1="4" x2="46" y2="-2" strokeWidth="1.5" />
+          <circle cx="46" cy="-3" r="2" fill="#0ff" stroke="none" />
+        </g>
+        {/* Legs */}
+        <rect x="16" y="59" width="10" height="21" rx="2" />
+        <rect x="29" y="59" width="10" height="21" rx="2" />
+        {/* Feet */}
+        <rect x="12" y="78" width="14" height="6" rx="2" />
+        <rect x="29" y="78" width="14" height="6" rx="2" />
+      </g>
+    </svg>
+  );
+}
+
 export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-card animate-fade-slide">
         <h2>Contact Me</h2>
-        <p className="cta-text">Connect with me on any of my socials below — I’m just a click away!</p>
+        <p className="cta-text">Connect with me on any of my socials below — I'm just a click away!</p>
+
+        <div className="contact-robot-wrapper">
+          <WalkieRobot />
+        </div>
 
         <div className="contact-cta">
           <a href="mailto:aditya.d.shanbhag25@gmail.com" className="btn default" aria-label="Send Email" title="Send Email">

@@ -8,6 +8,7 @@ import HeroHUD from "./components/HeroHUD/HeroHUD";
 import HeroMatrix from "./components/HeroMatrix/HeroMatrix";
 import IntroDescription from "./components/IntroDescription/IntroDescription";
 import Projects from "./components/Projects/Projects";
+import ScrollFollower from "./components/ScrollFollower/ScrollFollower";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Skills from "./components/Skills/Skills";
 
@@ -31,6 +32,7 @@ function App() {
         <Skills />
         <Contact />
       </main>
+      <ScrollFollower />
       <ScrollToTop />
       <Footer />
     </>

@@ -95,3 +95,34 @@
 .read-more-btn:hover {
   color: #5ff;
 }
+
+/* ── Grad robot ── */
+
+.robot-grad {
+  height: 80px;
+  width: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 4px #0ff) drop-shadow(0 0 8px #0ff);
+}
+
+.grad-tassel {
+  transform-box: fill-box;
+  transform-origin: top center;
+  animation: tassel-sway 2s ease-in-out infinite alternate;
+}
+
+.robot-grad-wave {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: grad-arm-wave 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes tassel-sway {
+  0%   { transform: rotate(-13deg); }
+  100% { transform: rotate(13deg); }
+}
+
+@keyframes grad-arm-wave {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}

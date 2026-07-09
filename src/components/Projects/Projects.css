@@ -38,6 +38,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
 }
 
 .project-links a {
@@ -72,4 +73,33 @@
     0 0 5px #0ff,
     0 0 15px #0ff,
     0 0 30px #0ff;
+}
+
+/* ── Section robot shared ── */
+
+.section-robot-core {
+  animation: section-core-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes section-core-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* ── Projects pointer robot ── */
+
+.robot-pointer {
+  height: 48px;
+  width: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 4px #0ff) drop-shadow(0 0 8px #0ff);
+}
+
+.robot-pointer-arm {
+  animation: pointer-nudge 0.75s ease-in-out infinite alternate;
+}
+
+@keyframes pointer-nudge {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(5px); }
 }
