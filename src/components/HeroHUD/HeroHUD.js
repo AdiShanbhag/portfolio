@@ -20,7 +20,7 @@ export default function HeroHUD() {
         <ul>
           <li>Location: Canberra</li>
           <li>Experience: 4+ Years</li>
-          <li>Speciality: Java Developer</li>
+          <li>Speciality: Software Engineer</li>
         </ul>
       </div>
 

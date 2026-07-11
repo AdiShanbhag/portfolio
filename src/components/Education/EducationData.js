@@ -2,7 +2,7 @@ const education = [
   {
     degree: "Master of Information Technology & Systems",
     institution: "University of Canberra",
-    date: "Feb 2025 – Dec 2026",
+    date: "Aug 2025 – Present",
     location: "Canberra, Australia",
     details: [],
   },
