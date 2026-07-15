@@ -34,21 +34,21 @@ const projects = [
     description:
       "An AI-powered web app with two tools: a code explainer that breaks down code snippets, and a resume analyzer that reviews resumes and gives suggestions.",
     demo: "https://devmateai.netlify.app/",
-    buttonLabel: "Live Demo",
+    buttonLabel: "Check out",
   },
   {
     title: "WoodIt",
     description:
-      "A mobile puzzle game built in Unity, currently in closed testing on Google Play. Currently working through Google Play's testing requirements to move toward production release.",
+      "A mobile puzzle game built in Unity, currently live on Google Play.",
     demo: "https://paced.com.au",
-    buttonLabel: "Join Testing",
+    buttonLabel: "Check out",
   },
   {
     title: "Bull Magpie",
     description:
       "A real-time multiplayer word game built with Socket.io, React, and Node.js, deployed on Vercel and Railway. Handles game state synchronization and player disconnect/reconnect logic so games stay consistent even when connections drop.",
     demo: "https://bull-magpie.vercel.app/",
-    buttonLabel: "Live Demo",
+    buttonLabel: "Check out",
   },
 ];
 
